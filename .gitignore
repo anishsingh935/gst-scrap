@@ -1,0 +1,40 @@
+# Ignore node_modules directory
+node_modules/
+
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# dotenv environment variable file
+.env
+
+# Mac OS
+.DS_Store
+
+# Visual Studio Code
+.vscode
+
+# Jest coverage directory
+coverage
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn integrity file
+.yarn-integrity
+
+# macOS
+.idea
+
