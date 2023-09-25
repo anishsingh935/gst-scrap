@@ -42,6 +42,13 @@ const datavalue = async (url, pnr , email) => {
     };
 
     await page.goto(url , { waitUntil: 'networkidle0' });
+    try {
+      const pageContent = await page.content();
+      console.log(pageContent);
+      console.log(`Successfully navigated to ${url}`);
+    } catch (error) {
+      console.log(`Navigation to ${url} failed. Error: ${error}`);
+    }
     await page.type("input.form-control.hpBookingForm.gst-pnr", pnr, { delay: 20 });
     await page.type( "input.form-control.hpBookingForm.close-icon.gst-name-email", email, { delay: 20 });
     const navigationPromise = page.waitForNavigation({ waitUntil: "networkidle0" }).catch(err => { console.error("Navigation error:", err)});
