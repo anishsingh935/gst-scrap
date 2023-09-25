@@ -11,6 +11,7 @@ app.use(express.json());
 const datavalue = async (url, pnr , email) => {
   try {
 
+    console.log("Starting the browser launch");
     PuppeteerExtra.use(StealthPlugin());
 
     const browser = await PuppeteerExtra.launch({
@@ -21,7 +22,7 @@ const datavalue = async (url, pnr , email) => {
       //For the local
       // executablePath: "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
       headless: false,
-      executablePath: '/usr/bin/google-chrome-stable',
+      executablePath: '/usr/bin/google-chrome',
     })
 
     const page = await browser.newPage();
