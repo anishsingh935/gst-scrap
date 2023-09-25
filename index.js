@@ -22,7 +22,7 @@ const datavalue = async (url, pnr , email) => {
       //For the local
       // executablePath: "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
       args: ['--no-sandbox'],
-      headless: false,
+      headless: true,
       executablePath: '/usr/bin/google-chrome',
     })
 
