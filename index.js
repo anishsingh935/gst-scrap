@@ -14,13 +14,13 @@ const datavalue = async (url, pnr , email) => {
     PuppeteerExtra.use(StealthPlugin());
 
     const browser = await PuppeteerExtra.launch({
-      // args: chromium.args,
-      // defaultViewport: chromium.defaultViewport,
-      // executablePath: await chromium.executablePath(),
-      // headless: false,
-      //For the local
-      executablePath: "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      args: chromium.args,
+      defaultViewport: chromium.defaultViewport,
+      executablePath: await chromium.executablePath(),
       headless: false,
+      //For the local
+      // executablePath: "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      // headless: false,
     })
 
     const page = await browser.newPage();
